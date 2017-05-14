@@ -1,0 +1,2 @@
+class Menutype < ApplicationRecord
+end
