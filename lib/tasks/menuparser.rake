@@ -4,7 +4,7 @@ require 'nokogiri'
 namespace :menuparser do
   desc "メニュー取得"
   task :generate => :environment do
-    page = Nokogiri::HTML(open('http://www.sd-cafeteria.com/lunch.html'))
+    page = Nokogiri::HTML(open('http://www.sd-cafeteria.com/lunch.html'), nil, "Shift_JIS")
 
     # カフェテリアのwebサイトから月曜日の日付を取得
     node_date = page.xpath("//*/tr/th[2]").text
